@@ -51,3 +51,6 @@ def get_artist_tracks(last, user, artist):
 
 def get_track_scrobbles(last, user, artist, track):
     return last.get_user(user).get_track_scrobbles(artist,track)
+
+def get_user_last_scrobbles(last,user):
+    return last.get_user(user).get_recent_tracks(limit = 10)
